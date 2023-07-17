@@ -1,0 +1,14 @@
+.container-home {
+  .container-img {
+    display: flex;
+    justify-content: center;
+  }
+  .logo-home {
+    width: 200px;
+  }
+  .container-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+}
