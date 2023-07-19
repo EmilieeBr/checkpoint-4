@@ -11,11 +11,18 @@ class ArticlesManager extends AbstractManager {
     ]);
   }
 
-  update(articles) {
+  update(article) {
+    const { id, title, description, price } = article;
     return this.database.query(
-      `update ${this.table} set title = ? where id = ?`,
-      [articles.title, articles.id]
+      `UPDATE ${this.table} SET title = ?, description = ?, price = ? WHERE id = ?`,
+      [title, description, price, id]
     );
+  }
+
+  delete(articleId) {
+    return this.database.query(`delete from ${this.table} where id = ?`, [
+      articleId,
+    ]);
   }
 }
 

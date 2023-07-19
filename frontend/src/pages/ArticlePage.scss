@@ -1,0 +1,61 @@
+.article {
+  .container-img-p {
+    display: flex;
+    .img-article {
+      width: 300px;
+      margin: 45px;
+    }
+  }
+  .article-title {
+    color: #86570e;
+    text-align: center;
+    padding-top: 32px;
+  }
+  .article-description {
+    color: #86570e;
+    text-align: justify;
+    margin: 30px;
+    margin-right: 45px;
+  }
+
+  .article-price {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #86570e;
+  }
+
+  button {
+    background: #e1d9cb;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #86570e;
+    .croix {
+      width: 25px;
+    }
+    .crayon {
+      width: 25px;
+    }
+  }
+  .container-button {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .container-article {
+    display: flex;
+    flex-direction: column;
+  }
+
+ input {
+    background-color: transparent;
+    border: none;
+  }
+
+  .is_edit > input {
+    border: 1px solid black;
+  }
+}
