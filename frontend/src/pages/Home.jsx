@@ -16,7 +16,6 @@ export default function Home() {
         console.error(error);
       });
   }, []);
-  console.log(data);
   return (
     <div className="container-home">
       <div className="container-img">

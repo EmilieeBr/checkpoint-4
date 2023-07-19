@@ -15,6 +15,7 @@ function Article({ article }) {
 Article.propTypes = {
   article: PropTypes.shape({
     picture: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 
