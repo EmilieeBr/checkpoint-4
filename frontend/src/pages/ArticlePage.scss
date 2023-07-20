@@ -10,12 +10,23 @@
     color: #86570e;
     text-align: center;
     padding-top: 32px;
+    font-size: 30px;
+    font-weight: bold;
   }
+
   .article-description {
-    color: #86570e;
-    text-align: justify;
-    margin: 30px;
-    margin-right: 45px;
+    padding-top: 20px;
+  }
+
+  .container-price {
+    display: flex;
+    padding-top: 10px;
+    .euros {
+      padding: 7px;
+      color: #86570e;
+      font-weight: bold;
+      font-size: 20px;
+    }
   }
 
   .article-price {
@@ -23,6 +34,7 @@
     text-align: center;
     font-weight: bold;
     color: #86570e;
+    width: 35px;
   }
 
   button {
@@ -32,6 +44,9 @@
     border: none;
     border-radius: 5px;
     color: #86570e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     .croix {
       width: 25px;
     }
@@ -44,18 +59,38 @@
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    padding-top: 55px;
   }
   .container-article {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 10px;
   }
 
-  input {
+  input, textarea {
     background-color: transparent;
     border: none;
+    outline: none;
+    color: inherit;
+    line-height: inherit;
+    overflow: auto;
+    resize: none;
   }
 
-  .is_edit > input {
-    border: 1px solid black;
+  textarea {
+    width: 400px;
+    height: 90px;
+    margin: 0;
+    color: #86570e;
+    text-align: justify;
+  }
+
+  .is_edit input, .is_edit textarea {
+    border: 1px solid #86570e;
+    padding: 2px;
   }
 }
+
+
