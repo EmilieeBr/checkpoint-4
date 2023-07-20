@@ -5,10 +5,12 @@ class ArticlesManager extends AbstractManager {
     super({ table: "articles" });
   }
 
-  insert(articles) {
-    return this.database.query(`insert into ${this.table} (title) values (?)`, [
-      articles.title,
-    ]);
+  insert(article) {
+    const { title, description, price, picture } = article;
+    return this.database.query(
+      `INSERT INTO ${this.table} (title, description, price, picture) VALUES (?, ?, ?, ?)`,
+      [title, description, price, picture]
+    );
   }
 
   update(article) {

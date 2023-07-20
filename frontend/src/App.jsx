@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
 import ArticlePage from "./pages/ArticlePage";
+import AjoutArticle from "./pages/AjoutArticle";
 import "./App.scss";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/article-page/:id" element={<ArticlePage />} />
+          <Route path="/ajout-article" element={<AjoutArticle />} />
         </Routes>
       </Router>
     </div>

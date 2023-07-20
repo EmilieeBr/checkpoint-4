@@ -1,0 +1,57 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 63px;
+  .title-add-article {
+    padding-top: 30px;
+    color: #86570e;
+  }
+  .container-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    input {
+      width: 400px;
+      text-align: center;
+      background-color: #e1d9cb;
+      border: none;
+      height: 30px;
+      border-radius: 5px;
+    }
+    .add-price {
+      width: 100px;
+      background-color: #e1d9cb;
+    }
+    .add-description {
+      width: 600px;
+      height: 200px;
+      background-color: #e1d9cb;
+      border: none;
+      border-radius: 5px;
+      padding: 16px;
+    }
+    button {
+      background: #e1d9cb;
+      width: 200px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      color: #86570e;
+    }
+  }
+}
