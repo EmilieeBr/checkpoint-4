@@ -89,26 +89,27 @@ function ArticlePage() {
                 onChange={handleChange}
                 disabled={!isEditMode} // Disable input when not in edit mode
               />
-              <div className="container-description">
-                <input
-                  type="text"
-                  className="article-description"
-                  name="description"
-                  value={updatedData.description}
-                  onChange={handleChange}
-                  disabled={!isEditMode}
-                  size="300"
-                  maxLength="500" // Disable input when not in edit mode
-                />
-              </div>
-              <input
+              <textarea
                 type="text"
-                className="article-price"
-                name="price"
-                value={updatedData.price}
+                className="article-description"
+                name="description"
+                value={updatedData.description}
                 onChange={handleChange}
-                disabled={!isEditMode} // Disable input when not in edit mode
+                disabled={!isEditMode}
+                size="300"
+                maxLength="500" // Disable input when not in edit mode
               />
+              <div className="container-price">
+                <input
+                  type="number"
+                  className="article-price"
+                  name="price"
+                  value={updatedData.price}
+                  onChange={handleChange}
+                  disabled={!isEditMode} // Disable input when not in edit mode
+                />
+                <p className="euros">€</p>
+              </div>
               <div className="container-button">
                 {!isEditMode && (
                   <button
