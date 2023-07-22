@@ -6,6 +6,8 @@
 
 .article {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
   .container-img-p {
     display: flex;
     @include mobile {
