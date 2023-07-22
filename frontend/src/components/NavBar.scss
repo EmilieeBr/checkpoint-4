@@ -1,18 +1,29 @@
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  } }
 .navbar {
   height: 75px;
   display: flex;
   justify-content: space-between;
   background: #e1d9cb;
+  a {
+    text-decoration: none;
+  }
   .logo {
-    width: 100px;
+    width: 79px;
   }
   .menu {
     list-style: none;
-    .dressing {
+    display: flex;
+    .dressing, .ajout-article {
       padding-top: 25px;
-      padding-right: 25px;
+      padding-right: 22px;
       font-size: 20px;
       color: #86570e;
+      @include mobile {
+        font-size: 15px;
+      }
     }
   }
 }
