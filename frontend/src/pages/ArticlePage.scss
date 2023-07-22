@@ -1,6 +1,17 @@
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
 .article {
+  overflow: hidden;
   .container-img-p {
     display: flex;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
     .img-article {
       width: 300px;
       margin: 45px;
@@ -12,15 +23,31 @@
     padding-top: 32px;
     font-size: 30px;
     font-weight: bold;
+    @include mobile {
+      padding-top: 0;
+    }
   }
 
   .article-description {
     padding-top: 20px;
+    width: 360px;
+    height: 100px;
+
+    @include mobile {
+      padding-top: 0;
+      width: 315px;
+      height: 110px;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
   }
 
   .container-price {
     display: flex;
     padding-top: 10px;
+    @include mobile {
+      padding-top: 0;
+    }
     .euros {
       padding: 7px;
       color: #86570e;
@@ -60,6 +87,12 @@
     gap: 15px;
     align-items: center;
     padding-top: 55px;
+    @include mobile {
+      padding-top: 0;
+      padding-bottom: 10px;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   .container-article {
     display: flex;
@@ -69,7 +102,8 @@
     padding-top: 10px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     background-color: transparent;
     border: none;
     outline: none;
@@ -87,10 +121,9 @@
     text-align: justify;
   }
 
-  .is_edit input, .is_edit textarea {
+  .is_edit input,
+  .is_edit textarea {
     border: 1px solid #86570e;
     padding: 2px;
   }
 }
-
-
