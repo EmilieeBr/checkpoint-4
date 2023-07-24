@@ -1,0 +1,131 @@
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+.article {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  .container-img-p {
+    display: flex;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+    .img-article {
+      width: 300px;
+      margin: 45px;
+    }
+  }
+  .article-title {
+    color: #86570e;
+    text-align: center;
+    padding-top: 32px;
+    font-size: 30px;
+    font-weight: bold;
+    @include mobile {
+      padding-top: 0;
+    }
+  }
+
+  .article-description {
+    padding-top: 20px;
+    width: 360px;
+    height: 100px;
+
+    @include mobile {
+      padding-top: 0;
+      width: 315px;
+      height: 110px;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+  }
+
+  .container-price {
+    display: flex;
+    padding-top: 10px;
+    @include mobile {
+      padding-top: 0;
+    }
+    .euros {
+      padding: 7px;
+      color: #86570e;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .article-price {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #86570e;
+    width: 35px;
+  }
+
+  button {
+    background: #e1d9cb;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #86570e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .croix {
+      width: 25px;
+    }
+    .crayon {
+      width: 25px;
+    }
+  }
+  .container-button {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding-top: 55px;
+    @include mobile {
+      padding-top: 0;
+      padding-bottom: 10px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .container-article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  input,
+  textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    line-height: inherit;
+    overflow: auto;
+    resize: none;
+  }
+
+  textarea {
+    width: 400px;
+    height: 90px;
+    margin: 0;
+    color: #86570e;
+    text-align: justify;
+  }
+
+  .is_edit input,
+  .is_edit textarea {
+    border: 1px solid #86570e;
+    padding: 2px;
+  }
+}
